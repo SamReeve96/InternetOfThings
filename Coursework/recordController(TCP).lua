@@ -42,6 +42,8 @@ function handleRequest(request)
         changeSpeed()
     elseif request == 'changeRecordSize' then
         changeRecordSize()
+    elseif request == 'placedNewRecord' then
+        demoRecordPlacement()
     end
     updateStateString()
 end
@@ -131,7 +133,7 @@ function demoRecordPlacement()
 
     local playbackTimer = tmr.create()
     playbackTimer:register(playtime, tmr.ALARM_SINGLE, function (t)
-        print("recordEnded, flip over or get another one");
+        print("record Ended, flip over or get another one");
         stop()
         t:unregister()
     end)
@@ -183,7 +185,7 @@ mytimer:register(
                     conn:on(
                         "connection",
                         function(conn, s)
-                            conn:send("hello Sam! from Server\n")
+                            conn:send("hello! sent from Server\n")
                         end
                     )
                     conn:on(

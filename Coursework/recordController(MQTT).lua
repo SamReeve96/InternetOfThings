@@ -154,7 +154,7 @@ mytimer:register(
 
                 local playbackTimer = tmr.create()
                 playbackTimer:register(playtime, tmr.ALARM_SINGLE, function (t)
-                    print("recordEnded, flip over or get another one");
+                    print("record Ended, flip over or get another one");
                     stop()
                     t:unregister()
                 end)
