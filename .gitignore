@@ -1,0 +1,5 @@
+#Seperate file to hold ADAFRUIT Key
+*.adafruitIOKey
+
+#Ignore assets
+NodeMCU
