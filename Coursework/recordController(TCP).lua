@@ -153,8 +153,8 @@ end
 wifi.sta.autoconnect(1)
 wifi.setmode(wifi.STATION)
 station_cfg = {}
-station_cfg.ssid = "TP-Link_7BDB"
-station_cfg.pwd = "71771489"
+station_cfg.ssid = ""
+station_cfg.pwd = ""
 station_cfg.save = true
 wifi.sta.config(station_cfg)
 srv = net.createServer(net.TCP, 30)
